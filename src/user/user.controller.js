@@ -28,13 +28,6 @@ export const login = async (req, res) => {
     try {
         const user = await User.findOne({ email: req.body.email });
 
-        // Comprueba si el usuario no existe
-        if (!user) {
-            return res.status(400).json({
-                msg: 'Usuario no existe'
-            });
-        }
-
         // Compara la contraseña
         const isMatch = bcrypt.compareSync(req.body.password, user.password);
         if (!isMatch) {
