@@ -1,4 +1,4 @@
-import User from '../models/user.model';
+import User from '../user/user.model.js';
 
 export const existenteEmail = async (email = '') => {
     // Buscar el usuario por correo electrónico

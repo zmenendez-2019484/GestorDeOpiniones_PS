@@ -1,11 +1,11 @@
-import bcrypt from 'bcrypt';
-import User from '../models/User.js';
+import bcrypt from 'bcryptjs';
+import User from '../user/user.model.js';
 import { generateJWT } from '../helpers/generate-jwt.js';
 
 export const register = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
-        const user = new User({ name, email, password });
+        const { username, email, password } = req.body;
+        const user = new User({ username, email, password });
 
         const salt = bcrypt.genSaltSync();
         user.password = bcrypt.hashSync(password, salt);
@@ -23,10 +23,26 @@ export const register = async (req, res) => {
 
 }
 
-
 export const login = async (req, res) => {
     try {
-        const user = await User.findOne({ email: req.body.email });
+        let user;
+
+        // Comprueba si se envió un email
+        if (req.body.email) {
+            user = await User.findOne({ email: req.body.email });
+        }
+
+        // Comprueba si se envió un username
+        if (!user && req.body.username) {
+            user = await User.findOne({ username: req.body.username });
+        }
+
+        // Si no se encontró el usuario, envía un mensaje de error
+        if (!user) {
+            return res.status(400).json({
+                msg: 'Usuario o contraseña incorrectos'
+            });
+        }
 
         // Compara la contraseña
         const isMatch = bcrypt.compareSync(req.body.password, user.password);
@@ -36,6 +52,7 @@ export const login = async (req, res) => {
             });
         }
 
+        // Genera el token JWT
         const token = await generateJWT(user.id);
 
         res.status(200).json({
@@ -43,10 +60,10 @@ export const login = async (req, res) => {
             user,
             token
         });
-    } catch (error) {
+    } catch (e) {
+        console.log(e);
         res.status(500).json({
-            msg: 'No se pudo iniciar sesión'
+            msg: "Comuniquese con el administrador",
         });
     }
 }
-

@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import User from '../models/User.js';
+import User from '../user/user.model.js';
 
 export const validarJWT = async (req, res, next) => {
     // Obtener el token de la cabecera de la petición
@@ -26,7 +26,6 @@ export const validarJWT = async (req, res, next) => {
             });
         }
 
-        // Agregar el usuario al objeto de solicitud (req) para su uso posterior
         req.user = user;
 
         // Llamar a la siguiente función en la cadena de middlewares

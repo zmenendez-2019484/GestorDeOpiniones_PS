@@ -4,22 +4,24 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import userRoutes from '../src/user/user.routes.js';
 
-class Server{
-    constructor(){
+class Server {
+    constructor() {
 
         this.app = express();
         this.port = process.env.PORT;
-
+        this.registerUserPath = '/opinionManager/v1/user/register';
+        this.loginUserPath = '/opinionManager/v1/user';
         this.middlewares();
         this.conectarDB();
-
+        this.routes();
     }
     async conectarDB() {
         await dbConnection();
     }
 
-    middlewares(){
+    middlewares() {
         this.app.use(express.urlencoded({ extended: false }));
         this.app.use(cors());
         this.app.use(express.json());
@@ -27,9 +29,14 @@ class Server{
         this.app.use(morgan('dev'));
     }
 
-    listen(){
+    routes() {
+        this.app.use(this.loginUserPath, userRoutes);
+        this.app.use(this.registerUserPath, userRoutes);
+    }
 
-        this.app.listen(this.port, () =>{
+    listen() {
+
+        this.app.listen(this.port, () => {
             console.log('Server is running in the port', this.port);
         });
     }
