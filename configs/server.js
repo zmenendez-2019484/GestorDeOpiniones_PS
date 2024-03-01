@@ -13,6 +13,7 @@ class Server {
         this.port = process.env.PORT;
         this.registerUserPath = '/opinionManager/v1/user/register';
         this.loginUserPath = '/opinionManager/v1/user';
+        this.putUserPath = '/opinionManager/v1/user';
         this.middlewares();
         this.conectarDB();
         this.routes();
