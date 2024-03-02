@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Category",
+    "dateExported": "2024-03-02T19:25:03.177Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9bcfa810-3674-44dc-ae1c-b50e107e85d0",
+            "colId": "18f561d6-363c-44b5-a1d5-48ea017bc7cc",
+            "containerId": "",
+            "name": "postCategory",
+            "url": "http://localhost:3000/opinionManager/v1/category/addCategory",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-02T02:21:58.678Z",
+            "modified": "2024-03-02T02:41:12.798Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Publicidad\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

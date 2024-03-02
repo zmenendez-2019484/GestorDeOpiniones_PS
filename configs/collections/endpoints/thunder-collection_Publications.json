@@ -1,0 +1,76 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Publications",
+    "dateExported": "2024-03-02T19:25:11.871Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "faaa79ef-075d-496f-849a-2a6e6b7998ec",
+            "colId": "bb6d7955-3a08-49db-92cd-52e4843b4392",
+            "containerId": "",
+            "name": "postPublications",
+            "url": "http://localhost:3000/opinionManager/v1/publication",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-02T04:27:13.580Z",
+            "modified": "2024-03-02T18:57:27.709Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzNzEzZTUzZDIwZWQ5YzNkNTcyZTkiLCJpYXQiOjE3MDk0MDQ1MDMsImV4cCI6MTcwOTQwODEwM30.LshkRkVd3A2z_DF9-dmUn9N_AwRBaxaR3pYbjGcG0As"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Cristiano Ronaldo\",\n  \"text\": \"El mejor jugador de todos los tiempos\",\n  \"category\": \"65e290152eced950ff233996\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e691a646-ca92-4184-982d-a1c932486624",
+            "colId": "bb6d7955-3a08-49db-92cd-52e4843b4392",
+            "containerId": "",
+            "name": "putPublications",
+            "url": "http://localhost:3000/opinionManager/v1/publication/65e3719e53d20ed9c3d572ee",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-02T06:06:00.782Z",
+            "modified": "2024-03-02T18:46:01.267Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZWM0NjZlMmQ3ZjkzMmZmOWI5MTQiLCJpYXQiOjE3MDk0MDUxMTksImV4cCI6MTcwOTQwODcxOX0.NqxYWGeNSCTXKgQ6Uoli5ZbqOnewpvHi0C6u7bx3x0Y"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"El himno del Real Madrid 2\",\n  \"text\": \"Hala Madrid\",\n  \"category\": \"65e290152eced950ff233997\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "974d9ddf-13f0-4a06-bf3f-57dc5d871eb6",
+            "colId": "bb6d7955-3a08-49db-92cd-52e4843b4392",
+            "containerId": "",
+            "name": "deletePublications",
+            "url": "http://localhost:3000/opinionManager/v1/publication/deletePost/65e3719e53d20ed9c3d572ee",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-02T06:54:46.342Z",
+            "modified": "2024-03-02T18:46:21.149Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxZWM0NjZlMmQ3ZjkzMmZmOWI5MTQiLCJpYXQiOjE3MDk0MDUxMTksImV4cCI6MTcwOTQwODcxOX0.NqxYWGeNSCTXKgQ6Uoli5ZbqOnewpvHi0C6u7bx3x0Y"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
