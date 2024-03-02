@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js';
+import categoryRoutes from '../src/categories/category.routes.js';
 
 class Server {
     constructor() {
@@ -14,6 +15,7 @@ class Server {
         this.registerUserPath = '/opinionManager/v1/user/register';
         this.loginUserPath = '/opinionManager/v1/user';
         this.putUserPath = '/opinionManager/v1/user';
+        this.postCategoryPath = '/opinionManager/v1/category';
         this.middlewares();
         this.conectarDB();
         this.routes();
@@ -33,6 +35,8 @@ class Server {
     routes() {
         this.app.use(this.loginUserPath, userRoutes);
         this.app.use(this.registerUserPath, userRoutes);
+        this.app.use(this.putUserPath, userRoutes);
+        this.app.use(this.postCategoryPath, categoryRoutes);
     }
 
     listen() {
