@@ -7,6 +7,7 @@ import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js';
 import categoryRoutes from '../src/categories/category.routes.js';
 import publicationRoutes from '../src/publications/publication.routes.js';
+import commentRoutes from '../src/comments/comment.routes.js';
 
 class Server {
     constructor() {
@@ -20,6 +21,9 @@ class Server {
         this.postPublicationPath = '/opinionManager/v1/publication';
         this.putPublicationPath = '/opinionManager/v1/publication';
         this.deletePublicationPath = '/opinionManager/v1/publication';
+        this.postCommentPath = '/opinionManager/v1/comment';
+        this.putCommentPath = '/opinionManager/v1/comment';
+        this.deleteCommentPath = '/opinionManager/v1/comment';
         this.middlewares();
         this.conectarDB();
         this.routes();
@@ -44,6 +48,9 @@ class Server {
         this.app.use(this.postPublicationPath, publicationRoutes);
         this.app.use(this.putPublicationPath, publicationRoutes);
         this.app.use(this.deletePublicationPath, publicationRoutes);
+        this.app.use(this.postCommentPath, commentRoutes);
+        this.app.use(this.putCommentPath, commentRoutes);
+        this.app.use(this.deleteCommentPath, commentRoutes);
     }
 
     listen() {

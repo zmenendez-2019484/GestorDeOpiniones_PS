@@ -2,6 +2,9 @@
 const expectedFieldNames = ['username', 'email', 'password', 'oldPassword'];
 const expectedFieldCamps = ['username', 'email', 'password'];
 const expectedFieldNamesPost = ['title', 'text', 'category'];
+const expectedFieldNamesPostComment = ['content', 'post'];
+
+
 export const validateFieldNames = (req, res, next) => {
     const fieldNames = Object.keys(req.body);
 
@@ -42,4 +45,18 @@ export const validateFieldsPost = (req, res, next) => {
     }
 
     next();
-}
+};
+
+export const validateFieldsPostComment = (req, res, next) => {
+    const fieldNames = Object.keys(req.body);
+
+    const hasUnexpectedFields = fieldNames.some(fieldName => !expectedFieldNamesPostComment.includes(fieldName));
+
+    if (hasUnexpectedFields) {
+        return res.status(400).json({
+            msg: 'Nombres de campos inválidos.', expectedFieldNamesPostComment
+        });
+    }
+
+    next();
+};
