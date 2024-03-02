@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "65e2ad7cf2479226c94e34b1"
+  },
+  "title": "Hala Madrid",
+  "text": "JalaMadrid",
+  "category": {
+    "$oid": "65e290152eced950ff233996"
+  },
+  "createdBy": {
+    "$oid": "65e1ec466e2d7f932ff9b914"
+  },
+  "status": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e2adbd78403d8b7523eabe"
+  },
+  "title": "El himno del Real Madrid",
+  "text": "Hala Madrid",
+  "category": {
+    "$oid": "65e290152eced950ff233996"
+  },
+  "createdBy": {
+    "$oid": "65e1ec466e2d7f932ff9b914"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e3719e53d20ed9c3d572ee"
+  },
+  "title": "Programacion",
+  "text": "Regalamos un curso de programacion",
+  "category": {
+    "$oid": "65e291c82eced950ff233998"
+  },
+  "createdBy": {
+    "$oid": "65e3713e53d20ed9c3d572e9"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e3769753d20ed9c3d572fe"
+  },
+  "title": "Cristiano Ronaldo",
+  "text": "El mejor jugador de todos los tiempos",
+  "category": {
+    "$oid": "65e290152eced950ff233996"
+  },
+  "createdBy": {
+    "$oid": "65e3713e53d20ed9c3d572e9"
+  },
+  "status": true,
+  "__v": 0
+}]

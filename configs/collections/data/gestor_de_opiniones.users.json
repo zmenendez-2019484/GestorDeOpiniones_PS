@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "65e1ec466e2d7f932ff9b914"
+  },
+  "username": "jsoto1",
+  "email": "jsoto1@kinal.com",
+  "password": "$2a$10$QPm9TNIgD5JHssFiu4R85eo02hfV44SPLPWXgSjUxR3xxNMJI5k8S",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e1ecbc0d6197c539b90ace"
+  },
+  "username": "zmenendez3232322321",
+  "email": "zmenendez@kinal.com",
+  "password": "$2a$10$F9aFcYYQ8tdL2WvD6CCPAuqjAPZdwlWdmkiHBOS8pnIe3SBrNE9ke",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e3713e53d20ed9c3d572e9"
+  },
+  "username": "omenendez",
+  "email": "omenendez@kinal.com",
+  "password": "$2a$10$IufFSSfl73onLJE9s5KWf.oF76euPoTyfaIY2iRAGvwb2iEhJmA9S",
+  "__v": 0
+}]

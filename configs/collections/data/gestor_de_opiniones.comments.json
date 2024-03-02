@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "65e2dce206200e9c981c2cf0"
+  },
+  "content": "Hala madrid",
+  "createdBy": {
+    "$oid": "65e1ec466e2d7f932ff9b914"
+  },
+  "post": {
+    "$oid": "65e2adbd78403d8b7523eabe"
+  },
+  "status": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e3744753d20ed9c3d572f6"
+  },
+  "content": "Estoy interesado",
+  "createdBy": {
+    "$oid": "65e1ec466e2d7f932ff9b914"
+  },
+  "post": {
+    "$oid": "65e3719e53d20ed9c3d572ee"
+  },
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e376dd53d20ed9c3d57302"
+  },
+  "content": "Factos",
+  "createdBy": {
+    "$oid": "65e1ecbc0d6197c539b90ace"
+  },
+  "post": {
+    "$oid": "65e3769753d20ed9c3d572fe"
+  },
+  "status": true,
+  "__v": 0
+}]
